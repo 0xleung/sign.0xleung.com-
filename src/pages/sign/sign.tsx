@@ -91,15 +91,16 @@ const Sign = ()=>{
                     display: 'none',
                 }}>
                 {accountAdress}
-                
-                {sig}
-                </Box>
                 <ILink href={`https://www.0xleung.com/authed/${sig}`} target="_blank" rel="noopener noreferrer">
                     BACK
                 </ILink>
                 <ILink href={`https://youtube.com`} target="_blank" rel="noopener noreferrer">
                     youtube
                 </ILink>
+                
+                {sig}
+                </Box>
+                
                 <Button variant="contained" onClick={async ()=>{
                     const s = await MetamaskSign.sign('app metamask sign test');
                     setSig(`${accountAdress}:${s}`)
