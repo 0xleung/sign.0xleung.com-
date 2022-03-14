@@ -99,8 +99,8 @@ const Sign = ()=>{
                 <Button variant="contained" onClick={async ()=>{
                     const s = await MetamaskSign.sign('app metamask sign test');
                     setSig(`${accountAdress}:${s}`)
-                    // window.location.href = `https://www.0xleung.com/${s}`;
-                    window.open(`https://www.0xleung.com/authed/${s}`, '_blank')
+                    window.location.href = `https://www.0xleung.com/${s}`;
+                    // window.open(`https://www.0xleung.com/authed/${s}`, '_blank')
                 }}>Sign</Button>
             </div>
         </>
